@@ -57,28 +57,20 @@
 	<script type="text/template" id="tipoAutoModelTemplate">
 		<form class="form-horizontal" onsubmit="return false;">
 			<fieldset>
-				<div id="pktipoAutoInputContainer" class="control-group">
-					<label class="control-label" for="pktipoAuto">Pktipo Auto</label>
-					<div class="controls inline-inputs">
-						<span class="input-xlarge uneditable-input" id="pktipoAuto"><%= _.escape(item.get('pktipoAuto') || '') %></span>
-						<span class="help-inline"></span>
-					</div>
-				</div>
-				<div id="nombreInputContainer" class="control-group">
+				<!-- PKtipo_auto -->
+                <input type="hidden" id="pktipoAuto" value="<%= _.escape(item.get('pktipoAuto') || '') %>">
+
+                <div id="nombreInputContainer" class="control-group">
 					<label class="control-label" for="nombre">Nombre</label>
 					<div class="controls inline-inputs">
 						<input type="text" class="input-xlarge" id="nombre" placeholder="Nombre" value="<%= _.escape(item.get('nombre') || '') %>">
 						<span class="help-inline"></span>
 					</div>
 				</div>
-				<div id="fkempresaInputContainer" class="control-group">
-					<label class="control-label" for="fkempresa">Fkempresa</label>
-					<div class="controls inline-inputs">
-						<input type="text" class="input-xlarge" id="fkempresa" placeholder="Fkempresa" value="<%= _.escape(item.get('fkempresa') || '') %>">
-						<span class="help-inline"></span>
-					</div>
-				</div>
-			</fieldset>
+                <!-- FKEmpresa -->
+                <input type="hidden" id="fkempresa" value="<?php echo $_SESSION['empresa']->pkempresa ?>">
+
+            </fieldset>
 		</form>
 
 		<!-- delete button is is a separate form to prevent enter key from triggering a delete -->

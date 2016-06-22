@@ -41,7 +41,8 @@ class TipoAutoReporter extends Reporter
 			,`tipo_auto`.`pktipo_auto` as PktipoAuto
 			,`tipo_auto`.`nombre` as Nombre
 			,`tipo_auto`.`fkempresa` as Fkempresa
-		from `tipo_auto`";
+		FROM `tipo_auto`
+		WHERE `tipo_auto`.`fkempresa` =".$_SESSION['empresa']->pkempresa;
 
 		// the criteria can be used or you can write your own custom logic.
 		// be sure to escape any user input with $criteria->Escape()

@@ -21,23 +21,26 @@ require_once("ReservaMap.php");
  */
 class ReservaDAO extends Phreezable
 {
-	/** @var int */
-	public $Pkreserva;
+    /** @var int */
+    public $Pkreserva;
 
-	/** @var date */
-	public $Fecha;
+    /** @var date */
+    public $FechaIni;
 
-	/** @var int */
-	public $Precio;
+    /** @var date */
+    public $FechaFin;
 
-	/** @var int */
-	public $Fkcliente;
+    /** @var int */
+    public $Precio;
 
-	/** @var int */
-	public $Fkauto;
+    /** @var int */
+    public $Fkcliente;
 
-	/** @var int */
-	public $Fkempresa;
+    /** @var int */
+    public $Fkauto;
+
+    /** @var int */
+    public $Fkempresa;
 
 
 

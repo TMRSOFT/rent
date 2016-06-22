@@ -49,7 +49,9 @@ class ClienteReporter extends Reporter
 			,`cliente`.`telefono` as Telefono
 			,`cliente`.`correo` as Correo
 			,`cliente`.`fkempresa` as Fkempresa
-		from `cliente`";
+		FROM `cliente`
+		WHERE `cliente`.`fkempresa` =".$_SESSION['empresa']->pkempresa;
+
 
 		// the criteria can be used or you can write your own custom logic.
 		// be sure to escape any user input with $criteria->Escape()

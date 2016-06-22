@@ -34,7 +34,6 @@
 		<table class="collection table table-bordered table-hover">
 		<thead>
 			<tr>
-				<th id="header_Pkcliente">Pkcliente<% if (page.orderBy == 'Pkcliente') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
 				<th id="header_Ci">Ci<% if (page.orderBy == 'Ci') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
 				<th id="header_Nombre">Nombre<% if (page.orderBy == 'Nombre') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
 				<th id="header_Apellido">Apellido<% if (page.orderBy == 'Apellido') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
@@ -48,7 +47,6 @@
 		<tbody>
 		<% items.each(function(item) { %>
 			<tr id="<%= _.escape(item.get('pkcliente')) %>">
-				<td><%= _.escape(item.get('pkcliente') || '') %></td>
 				<td><%= _.escape(item.get('ci') || '') %></td>
 				<td><%= _.escape(item.get('nombre') || '') %></td>
 				<td><%= _.escape(item.get('apellido') || '') %></td>
@@ -69,13 +67,8 @@
 	<script type="text/template" id="clienteModelTemplate">
 		<form class="form-horizontal" onsubmit="return false;">
 			<fieldset>
-				<div id="pkclienteInputContainer" class="control-group">
-					<label class="control-label" for="pkcliente">Pkcliente</label>
-					<div class="controls inline-inputs">
-						<span class="input-xlarge uneditable-input" id="pkcliente"><%= _.escape(item.get('pkcliente') || '') %></span>
-						<span class="help-inline"></span>
-					</div>
-				</div>
+				<!-- PKcliente -->
+                <input type="hidden" id="pkcliente" value="<%= _.escape(item.get('pkcliente') || '') %>">
 				<div id="ciInputContainer" class="control-group">
 					<label class="control-label" for="ci">Ci</label>
 					<div class="controls inline-inputs">
@@ -111,13 +104,8 @@
 						<span class="help-inline"></span>
 					</div>
 				</div>
-				<div id="fkempresaInputContainer" class="control-group">
-					<label class="control-label" for="fkempresa">Fkempresa</label>
-					<div class="controls inline-inputs">
-						<input type="text" class="input-xlarge" id="fkempresa" placeholder="Fkempresa" value="<%= _.escape(item.get('fkempresa') || '') %>">
-						<span class="help-inline"></span>
-					</div>
-				</div>
+                <!-- FKEmpresa -->
+                <input type="hidden" id="fkempresa" value="<?php echo $_SESSION['empresa']->pkempresa ?>">
 			</fieldset>
 		</form>
 

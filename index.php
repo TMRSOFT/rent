@@ -1,4 +1,11 @@
 <?php
+session_name("rent");
+session_start();
+$empresa = new stdClass();
+$empresa->pkempresa = 1;
+$empresa->nombre = 'rentas santa cruz';
+$_SESSION['empresa'] = $empresa;
+
 /** @package    RENT */
 
 /* GlobalConfig object contains all configuration information for the app */

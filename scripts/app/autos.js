@@ -223,6 +223,48 @@ var page = {
 		
 		$('.timepicker-default').timepicker({ defaultTime: 'value' });
 
+        // poblar el combobox con las opciones para marca de auto
+        // TODO: load only the selected value, then fetch all options when the drop-down is clicked
+        var marcaValues = new model.MarcaCollection();
+        marcaValues.fetch({
+            success: function(c){
+                var dd = $('#fkmarca');
+                dd.append('<option value=""></option>');
+                c.forEach(function(item,index)
+                {
+                    dd.append(app.getOptionHtml(
+                        item.get('pkmarca'),
+                        item.get('nombre'),
+                        page.auto.get('fkmarca') == item.get('pkmarca')
+                    ));
+                });
+            },
+            error: function(collection,response,scope){
+                app.appendAlert(app.getErrorMessage(response), 'alert-error',0,'modelAlert');
+            }
+        });
+
+        // poblar el combobox con las opciones para tipo de auto
+        // TODO: load only the selected value, then fetch all options when the drop-down is clicked
+        var tipo_autoValues = new model.TipoAutoCollection();
+        tipo_autoValues.fetch({
+            success: function(c){
+                var dd = $('#fktipoAuto');
+                dd.append('<option value=""></option>');
+                c.forEach(function(item,index)
+                {
+                    dd.append(app.getOptionHtml(
+                        item.get('pktipoAuto'),
+                        item.get('nombre'),
+                        page.auto.get('fktipoAuto') == item.get('pktipoAuto')
+                    ));
+                });
+            },
+            error: function(collection,response,scope){
+                app.appendAlert(app.getErrorMessage(response), 'alert-error',0,'modelAlert');
+            }
+        });
+
 
 		if (showDeleteButton) {
 			// attach click handlers to the delete buttons
@@ -265,8 +307,8 @@ var page = {
 		page.auto.save({
 			'placa': $('input#placa').val(),
 			'modelo': $('input#modelo').val(),
-			'fkmarca': $('input#fkmarca').val(),
-			'fktipoAuto': $('input#fktipoAuto').val(),
+			'fkmarca': $('select#fkmarca').val(),
+			'fktipoAuto': $('select#fktipoAuto').val(),
 			'ano': $('input#ano').val(),
 			'motor': $('input#motor').val(),
 			'color': $('input#color').val(),

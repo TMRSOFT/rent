@@ -18,64 +18,67 @@ require_once("verysimple/Phreeze/Reporter.php");
 class ReservaReporter extends Reporter
 {
 
-	// the properties in this class must match the columns returned by GetCustomQuery().
-	// 'CustomFieldExample' is an example that is not part of the `reserva` table
-	public $CustomFieldExample;
+    // the properties in this class must match the columns returned by GetCustomQuery().
+    // 'CustomFieldExample' is an example that is not part of the `reserva` table
+    public $CustomFieldExample;
 
-	public $Pkreserva;
-	public $Fecha;
-	public $Precio;
-	public $Fkcliente;
-	public $Fkauto;
-	public $Fkempresa;
+    public $Pkreserva;
+    public $FechaIni;
+    public $FechaFin;
+    public $Precio;
+    public $Fkcliente;
+    public $Fkauto;
+    public $Fkempresa;
 
-	/*
-	* GetCustomQuery returns a fully formed SQL statement.  The result columns
-	* must match with the properties of this reporter object.
-	*
-	* @see Reporter::GetCustomQuery
-	* @param Criteria $criteria
-	* @return string SQL statement
-	*/
-	static function GetCustomQuery($criteria)
-	{
-		$sql = "select
+    /*
+    * GetCustomQuery returns a fully formed SQL statement.  The result columns
+    * must match with the properties of this reporter object.
+    *
+    * @see Reporter::GetCustomQuery
+    * @param Criteria $criteria
+    * @return string SQL statement
+    */
+    static function GetCustomQuery($criteria)
+    {
+        $sql = "select
 			'custom value here...' as CustomFieldExample
 			,`reserva`.`pkreserva` as Pkreserva
-			,`reserva`.`fecha` as Fecha
+			,`reserva`.`fecha_ini` as FechaIni
+			,`reserva`.`fecha_fin` as FechaFin
 			,`reserva`.`precio` as Precio
 			,`reserva`.`fkcliente` as Fkcliente
 			,`reserva`.`fkauto` as Fkauto
 			,`reserva`.`fkempresa` as Fkempresa
-		from `reserva`";
+		FROM `reserva`
+		WHERE `reserva`.`fkempresa` =".$_SESSION['empresa']->pkempresa;
 
-		// the criteria can be used or you can write your own custom logic.
-		// be sure to escape any user input with $criteria->Escape()
-		$sql .= $criteria->GetWhere();
-		$sql .= $criteria->GetOrder();
+        // the criteria can be used or you can write your own custom logic.
+        // be sure to escape any user input with $criteria->Escape()
+        $sql .= $criteria->GetWhere();
+        $sql .= $criteria->GetOrder();
 
-		return $sql;
-	}
-	
-	/*
-	* GetCustomCountQuery returns a fully formed SQL statement that will count
-	* the results.  This query must return the correct number of results that
-	* GetCustomQuery would, given the same criteria
-	*
-	* @see Reporter::GetCustomCountQuery
-	* @param Criteria $criteria
-	* @return string SQL statement
-	*/
-	static function GetCustomCountQuery($criteria)
-	{
-		$sql = "select count(1) as counter from `reserva`";
+        return $sql;
+    }
 
-		// the criteria can be used or you can write your own custom logic.
-		// be sure to escape any user input with $criteria->Escape()
-		$sql .= $criteria->GetWhere();
+    /*
+    * GetCustomCountQuery returns a fully formed SQL statement that will count
+    * the results.  This query must return the correct number of results that
+    * GetCustomQuery would, given the same criteria
+    *
+    * @see Reporter::GetCustomCountQuery
+    * @param Criteria $criteria
+    * @return string SQL statement
+    */
+    static function GetCustomCountQuery($criteria)
+    {
+        $sql = "select count(1) as counter from `reserva`";
 
-		return $sql;
-	}
+        // the criteria can be used or you can write your own custom logic.
+        // be sure to escape any user input with $criteria->Escape()
+        $sql .= $criteria->GetWhere();
+
+        return $sql;
+    }
 }
 
 ?>

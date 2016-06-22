@@ -141,7 +141,9 @@ model.AutoModel = Backbone.Model.extend({
 	placa: '',
 	modelo: '',
 	fkmarca: '',
+    marcaNombre: '',
 	fktipoAuto: '',
+    tipoautoNombre: '',
 	ano: '',
 	motor: '',
 	color: '',
@@ -282,30 +284,32 @@ model.MarcaCollection = model.AbstractCollection.extend({
  * Reserva Backbone Model
  */
 model.ReservaModel = Backbone.Model.extend({
-	urlRoot: 'api/reserva',
-	idAttribute: 'pkreserva',
-	pkreserva: '',
-	fecha: '',
-	precio: '',
-	fkcliente: '',
-	fkauto: '',
-	fkempresa: '',
-	defaults: {
-		'pkreserva': null,
-		'fecha': new Date(),
-		'precio': '',
-		'fkcliente': '',
-		'fkauto': '',
-		'fkempresa': ''
-	}
+    urlRoot: 'api/reserva',
+    idAttribute: 'pkreserva',
+    pkreserva: '',
+    fechaIni: '',
+    fechaFin: '',
+    precio: '',
+    fkcliente: '',
+    fkauto: '',
+    fkempresa: '',
+    defaults: {
+        'pkreserva': null,
+        'fechaIni': new Date(),
+        'fechaFin': new Date(),
+        'precio': '',
+        'fkcliente': '',
+        'fkauto': '',
+        'fkempresa': ''
+    }
 });
 
 /**
  * Reserva Backbone Collection
  */
 model.ReservaCollection = model.AbstractCollection.extend({
-	url: 'api/reservas',
-	model: model.ReservaModel
+    url: 'api/reservas',
+    model: model.ReservaModel
 });
 
 /**

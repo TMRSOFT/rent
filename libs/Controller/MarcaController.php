@@ -87,7 +87,7 @@ class MarcaController extends AppBaseController
 				// if page is specified, use this instead (at the expense of one extra count query)
 				$pagesize = $this->GetDefaultPageSize();
 
-				$marcas = $this->Phreezer->Query('Marca',$criteria)->GetDataPage($page, $pagesize);
+				$marcas = $this->Phreezer->Query('MarcaReporter',$criteria)->GetDataPage($page, $pagesize);
 				$output->rows = $marcas->ToObjectArray(true,$this->SimpleObjectParams());
 				$output->totalResults = $marcas->TotalResults;
 				$output->totalPages = $marcas->TotalPages;
@@ -97,7 +97,7 @@ class MarcaController extends AppBaseController
 			else
 			{
 				// return all results
-				$marcas = $this->Phreezer->Query('Marca',$criteria);
+				$marcas = $this->Phreezer->Query('MarcaReporter',$criteria);
 				$output->rows = $marcas->ToObjectArray(true, $this->SimpleObjectParams());
 				$output->totalResults = count($output->rows);
 				$output->totalPages = 1;

@@ -34,7 +34,8 @@
 
 		<script type="text/javascript" src="scripts/libs/LAB.min.js"></script>
 		<script type="text/javascript">
-			$LAB.script("//code.jquery.com/jquery-1.8.2.min.js").wait()
+			//$LAB.script("//code.jquery.com/jquery-1.8.2.min.js").wait()
+			$LAB.script("scripts/libs/jquery.min.js")
 				.script("bootstrap/js/bootstrap.min.js")
 				.script("bootstrap/js/bootstrap-datepicker.js")
 				.script("bootstrap/js/bootstrap-timepicker.js")
@@ -60,20 +61,20 @@
 							<span class="icon-bar"></span>
 						</a>
                         <!--Escribir el nombre de la empresa aqui -->
-						<a class="brand" href="./">YOLO</a>
+						<a class="brand" href="./"><?php echo $_SESSION['empresa']->nombre ?></a>
 
 						<div class="nav-collapse collapse">
 							<ul class="nav">
-								<li <?php if ($this->nav=='reservas') { echo 'class="active"'; } ?>><a href="./reservas">Reservas</a></li>
-								<li <?php if ($this->nav=='autos') { echo 'class="active"'; } ?>><a href="./autos">Autos</a></li>
-								<li <?php if ($this->nav=='clientes') { echo 'class="active"'; } ?>><a href="./clientes">Clientes</a></li>	
+								<li <?php if ($this->nav=='reservas') { echo 'class="active"'; } ?>><a href="./reservas">Reservas de clientes</a></li>
+								<li <?php if ($this->nav=='autos') { echo 'class="active"'; } ?>><a href="./autos">Mis Autos</a></li>
+								<li <?php if ($this->nav=='clientes') { echo 'class="active"'; } ?>><a href="./clientes">Mis Clientes</a></li>
 							</ul>
 							<ul class="nav">
 								<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Mas <b class="caret"></b></a>
 								<ul class="dropdown-menu">
-								<li <?php if ($this->nav=='marcas') { echo 'class="active"'; } ?>><a href="./marcas">Marcas</a></li>
-								<li <?php if ($this->nav=='tipoautos') { echo 'class="active"'; } ?>><a href="./tipoautos">TipoAutos</a></li>
+								<li <?php if ($this->nav=='marcas') { echo 'class="active"'; } ?>><a href="./marcas">Marcas de autos</a></li>
+								<li <?php if ($this->nav=='tipoautos') { echo 'class="active"'; } ?>><a href="./tipoautos">Tipos de autos</a></li>
 								</ul>
 								</li>
 							</ul>

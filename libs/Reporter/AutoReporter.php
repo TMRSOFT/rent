@@ -20,7 +20,8 @@ class AutoReporter extends Reporter
 
 	// the properties in this class must match the columns returned by GetCustomQuery().
 	// 'CustomFieldExample' is an example that is not part of the `auto` table
-	public $CustomFieldExample;
+    public $marcaNombre;
+    public $tipoautoNombre;
 
 	public $Placa;
 	public $Modelo;
@@ -50,7 +51,8 @@ class AutoReporter extends Reporter
 	static function GetCustomQuery($criteria)
 	{
 		$sql = "select
-			'custom value here...' as CustomFieldExample
+			`marca`.`nombre` as marcaNombre
+			,`tipo_auto`.`nombre` as tipoautoNombre
 			,`auto`.`placa` as Placa
 			,`auto`.`modelo` as Modelo
 			,`auto`.`fkmarca` as Fkmarca
@@ -67,7 +69,12 @@ class AutoReporter extends Reporter
 			,`auto`.`estado` as Estado
 			,`auto`.`foto` as Foto
 			,`auto`.`fkempresa` as Fkempresa
-		from `auto`";
+		FROM `auto`
+		INNER JOIN `marca` on `fkmarca` = `pkmarca`
+		INNER JOIN `tipo_auto` on `fktipo_auto` = `pktipo_auto`
+		WHERE `auto`.`fkempresa` =".$_SESSION['empresa']->pkempresa;
+
+
 
 		// the criteria can be used or you can write your own custom logic.
 		// be sure to escape any user input with $criteria->Escape()

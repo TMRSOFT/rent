@@ -87,7 +87,7 @@ class TipoAutoController extends AppBaseController
 				// if page is specified, use this instead (at the expense of one extra count query)
 				$pagesize = $this->GetDefaultPageSize();
 
-				$tipoautos = $this->Phreezer->Query('TipoAuto',$criteria)->GetDataPage($page, $pagesize);
+				$tipoautos = $this->Phreezer->Query('TipoAutoReporter',$criteria)->GetDataPage($page, $pagesize);
 				$output->rows = $tipoautos->ToObjectArray(true,$this->SimpleObjectParams());
 				$output->totalResults = $tipoautos->TotalResults;
 				$output->totalPages = $tipoautos->TotalPages;
@@ -97,7 +97,7 @@ class TipoAutoController extends AppBaseController
 			else
 			{
 				// return all results
-				$tipoautos = $this->Phreezer->Query('TipoAuto',$criteria);
+				$tipoautos = $this->Phreezer->Query('TipoAutoReporter',$criteria);
 				$output->rows = $tipoautos->ToObjectArray(true, $this->SimpleObjectParams());
 				$output->totalResults = count($output->rows);
 				$output->totalPages = 1;

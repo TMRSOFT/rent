@@ -87,7 +87,7 @@ class AutoController extends AppBaseController
 				// if page is specified, use this instead (at the expense of one extra count query)
 				$pagesize = $this->GetDefaultPageSize();
 
-				$autos = $this->Phreezer->Query('Auto',$criteria)->GetDataPage($page, $pagesize);
+				$autos = $this->Phreezer->Query('AutoReporter',$criteria)->GetDataPage($page, $pagesize);
 				$output->rows = $autos->ToObjectArray(true,$this->SimpleObjectParams());
 				$output->totalResults = $autos->TotalResults;
 				$output->totalPages = $autos->TotalPages;
@@ -97,7 +97,7 @@ class AutoController extends AppBaseController
 			else
 			{
 				// return all results
-				$autos = $this->Phreezer->Query('Auto',$criteria);
+				$autos = $this->Phreezer->Query('AutoReporter',$criteria);
 				$output->rows = $autos->ToObjectArray(true, $this->SimpleObjectParams());
 				$output->totalResults = count($output->rows);
 				$output->totalPages = 1;
@@ -152,8 +152,8 @@ class AutoController extends AppBaseController
 
 			$auto->Placa = $this->SafeGetVal($json, 'placa');
 			$auto->Modelo = $this->SafeGetVal($json, 'modelo');
-			$auto->Fkmarca = $this->SafeGetVal($json, 'fkmarca');
-			$auto->FktipoAuto = $this->SafeGetVal($json, 'fktipoAuto');
+			$auto->Fkmarca = (int)$this->SafeGetVal($json, 'fkmarca');
+			$auto->FktipoAuto = (int)$this->SafeGetVal($json, 'fktipoAuto');
 			$auto->Ano = $this->SafeGetVal($json, 'ano');
 			$auto->Motor = $this->SafeGetVal($json, 'motor');
 			$auto->Color = $this->SafeGetVal($json, 'color');

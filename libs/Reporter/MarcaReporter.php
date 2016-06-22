@@ -43,7 +43,9 @@ class MarcaReporter extends Reporter
 			,`marca`.`nombre` as Nombre
 			,`marca`.`pais` as Pais
 			,`marca`.`fkempresa` as Fkempresa
-		from `marca`";
+		from `marca`
+		WHERE `marca`.`fkempresa` =".$_SESSION['empresa']->pkempresa;
+
 
 		// the criteria can be used or you can write your own custom logic.
 		// be sure to escape any user input with $criteria->Escape()

@@ -36,9 +36,9 @@
 			<tr>
 				<th id="header_Placa">Placa<% if (page.orderBy == 'Placa') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
 				<th id="header_Modelo">Modelo<% if (page.orderBy == 'Modelo') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
-				<th id="header_Fkmarca">Fkmarca<% if (page.orderBy == 'Fkmarca') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
-				<th id="header_FktipoAuto">Fktipo Auto<% if (page.orderBy == 'FktipoAuto') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
-				<th id="header_Ano">Ano<% if (page.orderBy == 'Ano') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
+				<th id="header_Fkmarca">Marca<% if (page.orderBy == 'Fkmarca') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
+				<th id="header_FktipoAuto">Tipo Auto<% if (page.orderBy == 'FktipoAuto') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
+				<th id="header_Ano">Año<% if (page.orderBy == 'Ano') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
 <!-- UNCOMMENT TO SHOW ADDITIONAL COLUMNS
 				<th id="header_Motor">Motor<% if (page.orderBy == 'Motor') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
 				<th id="header_Color">Color<% if (page.orderBy == 'Color') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
@@ -59,9 +59,11 @@
 			<tr id="<%= _.escape(item.get('placa')) %>">
 				<td><%= _.escape(item.get('placa') || '') %></td>
 				<td><%= _.escape(item.get('modelo') || '') %></td>
-				<td><%= _.escape(item.get('fkmarca') || '') %></td>
-				<td><%= _.escape(item.get('fktipoAuto') || '') %></td>
-				<td><%= _.escape(item.get('ano') || '') %></td>
+				<td><%= _.escape(item.get('marcaNombre') || '') %></td>
+				<td><%= _.escape(item.get('tipoautoNombre') || '') %></td>
+                <td><%= _.escape(item.get('ano') || '') %></td>
+
+
 <!-- UNCOMMENT TO SHOW ADDITIONAL COLUMNS
 				<td><%= _.escape(item.get('motor') || '') %></td>
 				<td><%= _.escape(item.get('color') || '') %></td>
@@ -102,21 +104,21 @@
 					</div>
 				</div>
 				<div id="fkmarcaInputContainer" class="control-group">
-					<label class="control-label" for="fkmarca">Fkmarca</label>
+					<label class="control-label" for="fkmarca">Marca</label>
 					<div class="controls inline-inputs">
-						<input type="text" class="input-xlarge" id="fkmarca" placeholder="Fkmarca" value="<%= _.escape(item.get('fkmarca') || '') %>">
+                        <select class="input-xlarge" id="fkmarca" name="fkmarca"></select>
 						<span class="help-inline"></span>
 					</div>
 				</div>
 				<div id="fktipoAutoInputContainer" class="control-group">
-					<label class="control-label" for="fktipoAuto">Fktipo Auto</label>
+					<label class="control-label" for="fktipoAuto">Tipo de Auto</label>
 					<div class="controls inline-inputs">
-						<input type="text" class="input-xlarge" id="fktipoAuto" placeholder="Fktipo Auto" value="<%= _.escape(item.get('fktipoAuto') || '') %>">
-						<span class="help-inline"></span>
+                        <select class="input-xlarge" id="fktipoAuto" name="fktipoAuto"></select>
+                        <span class="help-inline"></span>
 					</div>
 				</div>
 				<div id="anoInputContainer" class="control-group">
-					<label class="control-label" for="ano">Ano</label>
+					<label class="control-label" for="ano">Año</label>
 					<div class="controls inline-inputs">
 						<input type="text" class="input-xlarge" id="ano" placeholder="Ano" value="<%= _.escape(item.get('ano') || '') %>">
 						<span class="help-inline"></span>
@@ -137,21 +139,21 @@
 					</div>
 				</div>
 				<div id="nroPuertasInputContainer" class="control-group">
-					<label class="control-label" for="nroPuertas">Nro Puertas</label>
+					<label class="control-label" for="nroPuertas">Numero de Puertas</label>
 					<div class="controls inline-inputs">
 						<input type="text" class="input-xlarge" id="nroPuertas" placeholder="Nro Puertas" value="<%= _.escape(item.get('nroPuertas') || '') %>">
 						<span class="help-inline"></span>
 					</div>
 				</div>
 				<div id="capacidadInputContainer" class="control-group">
-					<label class="control-label" for="capacidad">Capacidad</label>
+					<label class="control-label" for="capacidad">Capacidad (personas)</label>
 					<div class="controls inline-inputs">
 						<input type="text" class="input-xlarge" id="capacidad" placeholder="Capacidad" value="<%= _.escape(item.get('capacidad') || '') %>">
 						<span class="help-inline"></span>
 					</div>
 				</div>
 				<div id="precioPorDiaInputContainer" class="control-group">
-					<label class="control-label" for="precioPorDia">Precio Por Dia</label>
+					<label class="control-label" for="precioPorDia">Precio Por Dia ($us)</label>
 					<div class="controls inline-inputs">
 						<input type="text" class="input-xlarge" id="precioPorDia" placeholder="Precio Por Dia" value="<%= _.escape(item.get('precioPorDia') || '') %>">
 						<span class="help-inline"></span>
@@ -165,7 +167,7 @@
 					</div>
 				</div>
 				<div id="capacidadCombustibleInputContainer" class="control-group">
-					<label class="control-label" for="capacidadCombustible">Capacidad Combustible</label>
+					<label class="control-label" for="capacidadCombustible">Capacidad Combustible (lt.)</label>
 					<div class="controls inline-inputs">
 						<input type="text" class="input-xlarge" id="capacidadCombustible" placeholder="Capacidad Combustible" value="<%= _.escape(item.get('capacidadCombustible') || '') %>">
 						<span class="help-inline"></span>
@@ -188,17 +190,13 @@
 				<div id="fotoInputContainer" class="control-group">
 					<label class="control-label" for="foto">Foto</label>
 					<div class="controls inline-inputs">
-						<input type="text" class="input-xlarge" id="foto" placeholder="Foto" value="<%= _.escape(item.get('foto') || '') %>">
-						<span class="help-inline"></span>
+                        <input type="file" class="input-xlarge" id="foto" name="foto"/>
+                        <span class="help-inline"></span>
 					</div>
 				</div>
-				<div id="fkempresaInputContainer" class="control-group">
-					<label class="control-label" for="fkempresa">Fkempresa</label>
-					<div class="controls inline-inputs">
-						<input type="text" class="input-xlarge" id="fkempresa" placeholder="Fkempresa" value="<%= _.escape(item.get('fkempresa') || '') %>">
-						<span class="help-inline"></span>
-					</div>
-				</div>
+                <!-- FKEmpresa -->
+                <input type="hidden" id="fkempresa" value="<?php echo $_SESSION['empresa']->pkempresa ?>">
+
 			</fieldset>
 		</form>
 
@@ -224,7 +222,7 @@
 		<div class="modal-header">
 			<a class="close" data-dismiss="modal">&times;</a>
 			<h3>
-				<i class="icon-edit"></i> Edit Auto
+				<i class="icon-edit"></i> Auto
 				<span id="modelLoader" class="loader progress progress-striped active"><span class="bar"></span></span>
 			</h3>
 		</div>

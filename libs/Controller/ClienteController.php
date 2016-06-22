@@ -87,7 +87,7 @@ class ClienteController extends AppBaseController
 				// if page is specified, use this instead (at the expense of one extra count query)
 				$pagesize = $this->GetDefaultPageSize();
 
-				$clientes = $this->Phreezer->Query('Cliente',$criteria)->GetDataPage($page, $pagesize);
+				$clientes = $this->Phreezer->Query('ClienteReporter',$criteria)->GetDataPage($page, $pagesize);
 				$output->rows = $clientes->ToObjectArray(true,$this->SimpleObjectParams());
 				$output->totalResults = $clientes->TotalResults;
 				$output->totalPages = $clientes->TotalPages;
@@ -97,7 +97,7 @@ class ClienteController extends AppBaseController
 			else
 			{
 				// return all results
-				$clientes = $this->Phreezer->Query('Cliente',$criteria);
+				$clientes = $this->Phreezer->Query('ClienteReporter',$criteria);
 				$output->rows = $clientes->ToObjectArray(true, $this->SimpleObjectParams());
 				$output->totalResults = count($output->rows);
 				$output->totalPages = 1;
