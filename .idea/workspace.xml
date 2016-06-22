@@ -2,6 +2,71 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f42f475-8c2f-44d2-ad7b-9477d3e30581" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/fonts/FontAwesome.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/fonts/fontawesome-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/fonts/fontawesome-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/fonts/fontawesome-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/scss/_bordered-pulled.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/scss/_core.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/scss/_extras.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/scss/_fixed-width.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/scss/_icons.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/scss/_larger.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/scss/_list.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/scss/_mixins.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/scss/_path.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/scss/_rotated-flipped.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/scss/_spinning.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/scss/_stacked.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/scss/_variables.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/js/bootstrap-multiselect.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/css/bootstrap-multiselect.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/css/bootstrap-switch.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/js/bootstrap-switch.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/less/bordered-pulled.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/less/core.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/less/extras.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/less/fixed-width.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/less/font-awesome.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/scss/font-awesome.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/less/icons.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/less/larger.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/less/list.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logout.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/less/mixins.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/less/path.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/less/rotated-flipped.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/less/spinning.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/less/stacked.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/less/variables.less" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\rent\bootstrap\font\fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\rent\bootstrap\font\fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\rent\bootstrap\font\fontawesome-webfont.woff" afterPath="" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\rent\bootstrap\font\fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/bootstrap/fonts/fontawesome-webfont.svg" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\rent\bootstrap\font\fontawesome-webfont.svgz" afterPath="$PROJECT_DIR$/bootstrap/fonts/fontawesome-webfont.svgz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/Controller/AutoController.php" afterPath="$PROJECT_DIR$/libs/Controller/AutoController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/Model/DAO/AutoCriteriaDAO.php" afterPath="$PROJECT_DIR$/libs/Model/DAO/AutoCriteriaDAO.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/Model/DAO/AutoDAO.php" afterPath="$PROJECT_DIR$/libs/Model/DAO/AutoDAO.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/AutoListView.tpl.php" afterPath="$PROJECT_DIR$/templates/AutoListView.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/Model/DAO/AutoMap.php" afterPath="$PROJECT_DIR$/libs/Model/DAO/AutoMap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/Reporter/AutoReporter.php" afterPath="$PROJECT_DIR$/libs/Reporter/AutoReporter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/ClienteListView.tpl.php" afterPath="$PROJECT_DIR$/templates/ClienteListView.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/libs/Controller/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/DefaultError404.tpl.php" afterPath="$PROJECT_DIR$/templates/DefaultError404.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/DefaultHome.tpl.php" afterPath="$PROJECT_DIR$/templates/DefaultHome.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/MarcaListView.tpl.php" afterPath="$PROJECT_DIR$/templates/MarcaListView.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/ReservaListView.tpl.php" afterPath="$PROJECT_DIR$/templates/ReservaListView.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/SecureExample.tpl.php" afterPath="$PROJECT_DIR$/templates/SecureExample.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/TipoAutoListView.tpl.php" afterPath="$PROJECT_DIR$/templates/TipoAutoListView.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/_Footer.tpl.php" afterPath="$PROJECT_DIR$/templates/_Footer.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/_Header.tpl.php" afterPath="$PROJECT_DIR$/templates/_Header.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_app_config.php" afterPath="$PROJECT_DIR$/_app_config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/autos.js" afterPath="$PROJECT_DIR$/scripts/app/autos.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/bootstrap/css/font-awesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/libs/jquery.min.js" afterPath="$PROJECT_DIR$/scripts/libs/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/model.js" afterPath="$PROJECT_DIR$/scripts/model.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/rent.iml" afterPath="$PROJECT_DIR$/.idea/rent.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rent.iws" />
@@ -30,61 +95,51 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19833334" vertical-offset="0" max-vertical-offset="1445">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.255" vertical-offset="0" max-vertical-offset="1530">
+              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
               <folding>
-                <marker date="1466574176461" expanded="false" signature="2083:2110" placeholder="..." />
-                <marker date="1466574176461" expanded="false" signature="2313:2340" placeholder="..." />
+                <marker date="1466629909715" expanded="false" signature="2186:2213" placeholder="..." />
+                <marker date="1466629909715" expanded="false" signature="2416:2443" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AutoController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libs/Controller/AutoController.php">
+      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-56.076923" vertical-offset="1330" max-vertical-offset="4981">
-              <caret line="164" column="47" selection-start-line="164" selection-start-column="47" selection-end-line="164" selection-end-column="47" />
+            <state vertical-scroll-proportion="-16.384615" vertical-offset="747" max-vertical-offset="1717">
+              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClienteController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libs/Controller/ClienteController.php">
+      <file leaf-file-name="_Header.tpl.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/_Header.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.692307" vertical-offset="1275" max-vertical-offset="4573">
-              <caret line="99" column="67" selection-start-line="99" selection-start-column="67" selection-end-line="99" selection-end-column="67" />
+            <state vertical-scroll-proportion="-7.3846154" vertical-offset="1219" max-vertical-offset="1819">
+              <caret line="83" column="121" selection-start-line="83" selection-start-column="110" selection-end-line="83" selection-end-column="121" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MarcaController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libs/Controller/MarcaController.php">
+      <file leaf-file-name="SecureExampleController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/Controller/SecureExampleController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.769231" vertical-offset="1377" max-vertical-offset="4471">
-              <caret line="99" column="63" selection-start-line="99" selection-start-column="63" selection-end-line="99" selection-end-column="63" />
+            <state vertical-scroll-proportion="-7.1923075" vertical-offset="510" max-vertical-offset="1836">
+              <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReservaController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libs/Controller/ReservaController.php">
+      <file leaf-file-name="_app_config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_app_config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.6923077" vertical-offset="1639" max-vertical-offset="4573">
-              <caret line="99" column="67" selection-start-line="99" selection-start-column="67" selection-end-line="99" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TipoAutoController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libs/Controller/TipoAutoController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8461537" vertical-offset="1479" max-vertical-offset="4437">
-              <caret line="99" column="69" selection-start-line="99" selection-start-column="69" selection-end-line="99" selection-end-column="69" />
+            <state vertical-scroll-proportion="-3.9230769" vertical-offset="918" max-vertical-offset="2448">
+              <caret line="73" column="59" selection-start-line="73" selection-start-column="59" selection-end-line="73" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -105,22 +160,11 @@
       <list>
         <option value="$PROJECT_DIR$/_machine_config.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/templates/MarcaListView.tpl.php" />
-        <option value="$PROJECT_DIR$/templates/TipoAutoListView.tpl.php" />
-        <option value="$PROJECT_DIR$/libs/Model/DAO/AutoMap.php" />
-        <option value="$PROJECT_DIR$/scripts/app/autos.js" />
-        <option value="$PROJECT_DIR$/templates/_Header.tpl.php" />
-        <option value="$PROJECT_DIR$/libs/Controller/AutoController.php" />
-        <option value="$PROJECT_DIR$/templates/AutoListView.tpl.php" />
-        <option value="$PROJECT_DIR$/templates/ClienteListView.tpl.php" />
-        <option value="$PROJECT_DIR$/scripts/model.js" />
         <option value="$PROJECT_DIR$/libs/Model/DAO/ReservaDAO.php" />
         <option value="$PROJECT_DIR$/libs/Model/DAO/ReservaMap.php" />
         <option value="$PROJECT_DIR$/libs/Model/DAO/ReservaCriteriaDAO.php" />
-        <option value="$PROJECT_DIR$/templates/ReservaListView.tpl.php" />
         <option value="$PROJECT_DIR$/scripts/app/reservas.js" />
         <option value="$PROJECT_DIR$/libs/Controller/ReservaController.php" />
-        <option value="$PROJECT_DIR$/libs/Reporter/AutoReporter.php" />
         <option value="$PROJECT_DIR$/libs/Reporter/ClienteReporter.php" />
         <option value="$PROJECT_DIR$/libs/Reporter/MarcaReporter.php" />
         <option value="$PROJECT_DIR$/libs/Reporter/ReservaReporter.php" />
@@ -128,6 +172,28 @@
         <option value="$PROJECT_DIR$/libs/Controller/ClienteController.php" />
         <option value="$PROJECT_DIR$/libs/Controller/MarcaController.php" />
         <option value="$PROJECT_DIR$/libs/Controller/TipoAutoController.php" />
+        <option value="$PROJECT_DIR$/libs/Model/DAO/AutoCriteriaDAO.php" />
+        <option value="$PROJECT_DIR$/libs/Model/DAO/AutoDAO.php" />
+        <option value="$PROJECT_DIR$/libs/Model/DAO/AutoMap.php" />
+        <option value="$PROJECT_DIR$/libs/Reporter/AutoReporter.php" />
+        <option value="$PROJECT_DIR$/scripts/model.js" />
+        <option value="$PROJECT_DIR$/scripts/libs/jquery.min.js" />
+        <option value="$PROJECT_DIR$/bootstrap/css/font-awesome.min.css" />
+        <option value="$PROJECT_DIR$/scripts/app/autos.js" />
+        <option value="$PROJECT_DIR$/templates/_Header.tpl.php" />
+        <option value="$PROJECT_DIR$/templates/ReservaListView.tpl.php" />
+        <option value="$PROJECT_DIR$/templates/MarcaListView.tpl.php" />
+        <option value="$PROJECT_DIR$/templates/ClienteListView.tpl.php" />
+        <option value="$PROJECT_DIR$/templates/TipoAutoListView.tpl.php" />
+        <option value="$PROJECT_DIR$/templates/DefaultError404.tpl.php" />
+        <option value="$PROJECT_DIR$/templates/AutoListView.tpl.php" />
+        <option value="$PROJECT_DIR$/libs/Controller/AutoController.php" />
+        <option value="$PROJECT_DIR$/libs/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/templates/_Footer.tpl.php" />
+        <option value="$PROJECT_DIR$/templates/DefaultHome.tpl.php" />
+        <option value="$PROJECT_DIR$/templates/SecureExample.tpl.php" />
+        <option value="$PROJECT_DIR$/logout.php" />
+        <option value="$PROJECT_DIR$/_app_config.php" />
         <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
@@ -194,11 +260,15 @@
     <property name="options.lastSelected" value="vcs.Git" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\rent" />
-      <recent name="C:\xampp\htdocs\rent\scripts\libs" />
+      <recent name="C:\xampp\htdocs\rent\bootstrap" />
+      <recent name="C:\xampp\htdocs\rent\bootstrap\font" />
+      <recent name="C:\xampp\htdocs\rent\bootstrap\js" />
+      <recent name="C:\xampp\htdocs\rent\bootstrap\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -220,6 +290,11 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <pass-parent-env-vars>false</pass-parent-env-vars>
+      <envs />
       <method />
     </configuration>
     <list size="0" />
@@ -247,29 +322,35 @@
       <option name="project" value="LOCAL" />
       <updated>1466575166136</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="version 2">
+      <created>1466575195337</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1466575195337</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
+    <frame x="-8" y="-8" width="1296" height="776" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298351" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.225" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298351" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32833582" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -301,149 +382,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08478803" vertical-offset="0" max-vertical-offset="401">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_machine_config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.2307692" vertical-offset="390" max-vertical-offset="1003">
-          <caret line="18" column="71" selection-start-line="18" selection-start-column="71" selection-end-line="18" selection-end-column="71" />
-          <folding>
-            <element signature="e#6#363#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_app_config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.692307" vertical-offset="768" max-vertical-offset="2414">
-          <caret line="73" column="45" selection-start-line="73" selection-start-column="45" selection-end-line="73" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_global_config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6084828" vertical-offset="1122" max-vertical-offset="3791">
-          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14029364" vertical-offset="492" max-vertical-offset="1105">
-          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/DefaultError404.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="639">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/DefaultHome.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05666667" vertical-offset="0" max-vertical-offset="2227">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/libs/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="603">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/Model/DAO/ClienteMap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6101142" vertical-offset="561" max-vertical-offset="1428">
-          <caret line="55" column="96" selection-start-line="55" selection-start-column="81" selection-end-line="55" selection-end-column="96" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/Model/AutoCriteria.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.858075" vertical-offset="526" max-vertical-offset="1139">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/Model/Auto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.49918434" vertical-offset="306" max-vertical-offset="952">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/Model/DAO/AutoDAO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.59380096" vertical-offset="364" max-vertical-offset="1360">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/_Header.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.076923" vertical-offset="969" max-vertical-offset="1700">
-          <caret line="77" column="37" selection-start-line="77" selection-start-column="37" selection-end-line="77" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/Model/DAO/AutoMap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.56666666" vertical-offset="918" max-vertical-offset="1581">
-          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4743" max-vertical-offset="5814">
-          <caret line="298" column="31" selection-start-line="298" selection-start-column="31" selection-end-line="298" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/Model/DAO/ReservaDAO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3457627" vertical-offset="5" max-vertical-offset="901">
-          <caret line="47" column="2" selection-start-line="47" selection-start-column="2" selection-end-line="47" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/Model/DAO/ReservaMap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9" vertical-offset="795" max-vertical-offset="1428">
-          <caret line="78" column="2" selection-start-line="78" selection-start-column="2" selection-end-line="78" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libs/Model/DAO/ReservaCriteriaDAO.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.94237286" vertical-offset="1671" max-vertical-offset="2329">
           <caret line="131" column="2" selection-start-line="131" selection-start-column="2" selection-end-line="131" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -451,84 +393,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23050848" vertical-offset="306" max-vertical-offset="1309">
           <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/MarcaListView.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20623916" vertical-offset="867" max-vertical-offset="2380">
-          <caret line="58" column="44" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ClienteListView.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3830156" vertical-offset="952" max-vertical-offset="2839">
-          <caret line="69" column="17" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/AutoListView.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39666668" vertical-offset="1122" max-vertical-offset="4386">
-          <caret line="80" column="17" selection-start-line="80" selection-start-column="17" selection-end-line="80" selection-end-column="17" />
-          <folding>
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1466569183114" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/TipoAutoListView.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34" vertical-offset="663" max-vertical-offset="2227">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app/autos.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5974441" vertical-offset="3978" max-vertical-offset="6732">
-          <caret line="256" column="47" selection-start-line="256" selection-start-column="47" selection-end-line="256" selection-end-column="47" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -536,19 +400,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="13.038462" vertical-offset="339" max-vertical-offset="952">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/Reporter/AutoReporter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.153846" vertical-offset="832" max-vertical-offset="1921">
-          <caret line="66" column="54" selection-start-line="66" selection-start-column="54" selection-end-line="66" selection-end-column="54" />
-          <folding>
-            <marker date="1466573966748" expanded="true" signature="-1:-1" placeholder="select `marc..." />
-            <marker date="1466573966748" expanded="true" signature="-1:-1" placeholder="select `marc..." />
-            <marker date="1466573966748" expanded="true" signature="-1:-1" placeholder="select count..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -556,13 +407,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.115385" vertical-offset="510" max-vertical-offset="1530">
           <caret line="47" column="45" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
-          <folding>
-            <marker date="1466573992927" expanded="true" signature="-1:-1" placeholder="select 'cust..." />
-            <marker date="1466573992927" expanded="true" signature="-1:-1" placeholder="select 'cust..." />
-            <marker date="1466573992927" expanded="true" signature="-1:-1" placeholder="select 'cust..." />
-            <marker date="1466573992927" expanded="true" signature="-1:-1" placeholder="/* * GetCust..." />
-            <marker date="1466573992927" expanded="true" signature="-1:-1" placeholder="select count..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -570,13 +414,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.115385" vertical-offset="510" max-vertical-offset="1428">
           <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <marker date="1466574004676" expanded="true" signature="-1:-1" placeholder="select 'cust..." />
-            <marker date="1466574004676" expanded="true" signature="-1:-1" placeholder="select 'cust..." />
-            <marker date="1466574004676" expanded="true" signature="-1:-1" placeholder="select 'cust..." />
-            <marker date="1466574004676" expanded="true" signature="-1:-1" placeholder="/* * GetCust..." />
-            <marker date="1466574004676" expanded="true" signature="-1:-1" placeholder="select count..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -584,13 +421,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.40338984" vertical-offset="510" max-vertical-offset="1377">
           <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
-          <folding>
-            <marker date="1466574046054" expanded="true" signature="-1:-1" placeholder="select 'cust..." />
-            <marker date="1466574046054" expanded="true" signature="-1:-1" placeholder="select 'cust..." />
-            <marker date="1466574046054" expanded="true" signature="-1:-1" placeholder="select 'cust..." />
-            <marker date="1466574046054" expanded="true" signature="-1:-1" placeholder="/* * GetCust..." />
-            <marker date="1466574046054" expanded="true" signature="-1:-1" placeholder="select count..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -598,19 +428,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14576271" vertical-offset="441" max-vertical-offset="1513">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <marker date="1466574036457" expanded="true" signature="-1:-1" placeholder="select 'cust..." />
-            <marker date="1466574036457" expanded="true" signature="-1:-1" placeholder="select 'cust..." />
-            <marker date="1466574036457" expanded="true" signature="-1:-1" placeholder="select count..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ReservaListView.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39666668" vertical-offset="0" max-vertical-offset="2992">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -618,25 +435,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.8785942" vertical-offset="0" max-vertical-offset="6732">
           <caret line="106" column="11" selection-start-line="106" selection-start-column="11" selection-end-line="106" selection-end-column="11" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/Controller/AutoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-56.076923" vertical-offset="1330" max-vertical-offset="4981">
-          <caret line="164" column="47" selection-start-line="164" selection-start-column="47" selection-end-line="164" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/Controller/ClienteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.692307" vertical-offset="1275" max-vertical-offset="4573">
-          <caret line="99" column="67" selection-start-line="99" selection-start-column="67" selection-end-line="99" selection-end-column="67" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -644,15 +442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.769231" vertical-offset="1377" max-vertical-offset="4471">
           <caret line="99" column="63" selection-start-line="99" selection-start-column="63" selection-end-line="99" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/Controller/SecureExampleController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1836">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -660,7 +449,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.6923077" vertical-offset="1639" max-vertical-offset="4573">
           <caret line="99" column="67" selection-start-line="99" selection-start-column="67" selection-end-line="99" selection-end-column="67" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -668,7 +456,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.8461537" vertical-offset="1479" max-vertical-offset="4437">
           <caret line="99" column="69" selection-start-line="99" selection-start-column="69" selection-end-line="99" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -676,17 +463,312 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4284">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/App/ExampleUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.8303426" vertical-offset="594" max-vertical-offset="1768">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/Model/DAO/AutoDAO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30668843" vertical-offset="730" max-vertical-offset="1411">
+          <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/Model/Auto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/Reporter/AutoReporter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="1938">
+          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/Model/DAO/AutoMap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.62333333" vertical-offset="816" max-vertical-offset="1598">
+          <caret line="70" column="9" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/css/bootstrap-switch.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="603">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/js/bootstrap-switch.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.056384742" vertical-offset="0" max-vertical-offset="603">
+          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/libs/LAB.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="603">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/js/bootstrap-multiselect.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.24440895" vertical-offset="153" max-vertical-offset="25636">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/libs/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1086262" vertical-offset="0" max-vertical-offset="626">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/css/font-awesome.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
+          <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/css/bootstrap-multiselect.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="626">
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/img/calendar.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/scss/_core.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19412725" vertical-offset="0" max-vertical-offset="613">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/less/core.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="639">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ReservaListView.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.677643" vertical-offset="0" max-vertical-offset="2992">
+          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/TipoAutoListView.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7642981" vertical-offset="1446" max-vertical-offset="2227">
+          <caret line="111" column="36" selection-start-line="111" selection-start-column="36" selection-end-line="111" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/MarcaListView.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36833334" vertical-offset="1581" max-vertical-offset="2380">
+          <caret line="106" column="65" selection-start-line="106" selection-start-column="65" selection-end-line="106" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/autos.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6517572" vertical-offset="4437" max-vertical-offset="7089">
+          <caret line="285" column="27" selection-start-line="285" selection-start-column="27" selection-end-line="285" selection-end-column="27" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.771518" vertical-offset="2142" max-vertical-offset="5831">
+          <caret line="157" column="15" selection-start-line="157" selection-start-column="15" selection-end-line="157" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/DefaultError404.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3882545" vertical-offset="0" max-vertical-offset="613">
+          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/Controller/ClienteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.3034258" vertical-offset="339" max-vertical-offset="4573">
+          <caret line="103" column="58" selection-start-line="103" selection-start-column="58" selection-end-line="103" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/Model/AutoCriteria.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5823817" vertical-offset="0" max-vertical-offset="1139">
+          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/Controller/AutoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48166665" vertical-offset="374" max-vertical-offset="5015">
+          <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/Model/DAO/AutoCriteriaDAO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.6655791" vertical-offset="3450" max-vertical-offset="4879">
+          <caret line="263" column="12" selection-start-line="263" selection-start-column="12" selection-end-line="263" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="639">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/_Footer.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.110929854" vertical-offset="0" max-vertical-offset="613">
+          <caret line="4" column="75" selection-start-line="4" selection-start-column="75" selection-end-line="4" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/AutoListView.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28333333" vertical-offset="204" max-vertical-offset="4624">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/DefaultErrorFatal.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/SecureExample.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.425" vertical-offset="0" max-vertical-offset="1207">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ClienteListView.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.7683334" vertical-offset="0" max-vertical-offset="2839">
+          <caret line="133" column="62" selection-start-line="133" selection-start-column="62" selection-end-line="133" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_machine_config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.4118644" vertical-offset="243" max-vertical-offset="833">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/DefaultHome.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45333335" vertical-offset="0" max-vertical-offset="799">
+          <caret line="16" column="62" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08319739" vertical-offset="0" max-vertical-offset="613">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/Controller/SecureExampleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.1923075" vertical-offset="510" max-vertical-offset="1836">
+          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_app_config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.9230769" vertical-offset="918" max-vertical-offset="2448">
+          <caret line="73" column="59" selection-start-line="73" selection-start-column="59" selection-end-line="73" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.384615" vertical-offset="747" max-vertical-offset="1717">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/_Header.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.3846154" vertical-offset="1219" max-vertical-offset="1819">
+          <caret line="83" column="121" selection-start-line="83" selection-start-column="110" selection-end-line="83" selection-end-column="121" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19833334" vertical-offset="0" max-vertical-offset="1445">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.255" vertical-offset="0" max-vertical-offset="1530">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
           <folding>
-            <marker date="1466574176461" expanded="false" signature="2083:2110" placeholder="..." />
-            <marker date="1466574176461" expanded="false" signature="2313:2340" placeholder="..." />
+            <marker date="1466629909715" expanded="false" signature="2186:2213" placeholder="..." />
+            <marker date="1466629909715" expanded="false" signature="2416:2443" placeholder="..." />
           </folding>
         </state>
       </provider>

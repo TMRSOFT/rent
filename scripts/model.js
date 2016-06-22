@@ -153,8 +153,9 @@ model.AutoModel = Backbone.Model.extend({
 	tipoCombustible: '',
 	capacidadCombustible: '',
 	tipoCaja: '',
-	estado: '',
-	foto: '',
+    condicion: '',
+    foto: '',
+    estado: '',
 	fkempresa: '',
 	defaults: {
 		'placa': null,

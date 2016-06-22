@@ -1,17 +1,22 @@
 <?php
-session_name("rent");
-session_start();
-$empresa = new stdClass();
-$empresa->pkempresa = 1;
-$empresa->nombre = 'rentas santa cruz';
-$_SESSION['empresa'] = $empresa;
-
 /** @package    RENT */
 
 /* GlobalConfig object contains all configuration information for the app */
 include_once("_global_config.php");
 include_once("_app_config.php");
 @include_once("_machine_config.php");
+
+session_name("rent");
+//if(!isset($_SESSION)){
+    session_start();
+    $empresa = new stdClass();
+    $empresa->pkempresa = 1;
+    $empresa->nombre = 'rentas santa cruz';
+    $empresa->administrador_nombre = 'Luis Daniel';
+    $_SESSION['empresa'] = $empresa;
+
+//}
+
 
 if (!GlobalConfig::$CONNECTION_SETTING)
 {

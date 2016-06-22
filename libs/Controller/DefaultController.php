@@ -3,7 +3,11 @@
 
 /** import supporting libraries */
 require_once("AppBaseController.php");
-
+require_once("Model/Auto.php");
+require_once("Model/TipoAuto.php");
+require_once("Model/Marca.php");
+require_once("Model/Cliente.php");
+require_once("Model/Reserva.php");
 /**
  * DefaultController is the entry point to the application
  *
@@ -32,6 +36,38 @@ class DefaultController extends AppBaseController
 	 */
 	public function Home()
 	{
+        require_once 'Model/AutoCriteria.php';
+        require_once 'Model/TipoAutoCriteria.php';
+        require_once 'Model/MarcaCriteria.php';
+        require_once 'Model/ClienteCriteria.php';
+        require_once 'Model/ReservaCriteria.php';
+
+        $autoCriteria = new AutoCriteria();
+        $autoCriteria->Fkempresa_Equals = $_SESSION['empresa']->pkempresa;
+        $autos = $this->Phreezer->Query('Auto',$autoCriteria);
+
+        $tipoautoCriteria = new TipoAutoCriteria();
+        $tipoautoCriteria->Fkempresa_Equals = $_SESSION['empresa']->pkempresa;
+        $tipoautos = $this->Phreezer->Query('TipoAuto',$tipoautoCriteria);
+
+        $marcaCriteria = new MarcaCriteria();
+        $marcaCriteria->Fkempresa_Equals = $_SESSION['empresa']->pkempresa;
+        $marcas = $this->Phreezer->Query('Marca',$marcaCriteria);
+
+        $clienteCriteria = new ClienteCriteria();
+        $clienteCriteria->Fkempresa_Equals = $_SESSION['empresa']->pkempresa;
+        $clientes = $this->Phreezer->Query('Cliente',$clienteCriteria);
+
+        $reservaCriteria = new ReservaCriteria();
+        $reservaCriteria->Fkempresa_Equals = $_SESSION['empresa']->pkempresa;
+        $reservas = $this->Phreezer->Query('Reserva',$reservaCriteria);
+
+        $this->Assign('autos',$autos);
+        $this->Assign('tipoautos',$tipoautos);
+        $this->Assign('marcas',$marcas);
+        $this->Assign('clientes',$clientes);
+        $this->Assign('reservas',$reservas);
+
 		$this->Render();
 	}
 

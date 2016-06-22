@@ -21,53 +21,56 @@ require_once("AutoMap.php");
  */
 class AutoDAO extends Phreezable
 {
-	/** @var int */
-	public $Placa;
+    /** @var string */
+    public $Placa;
 
-	/** @var int */
-	public $Modelo;
+    /** @var string */
+    public $Modelo;
 
-	/** @var int */
-	public $Fkmarca;
+    /** @var int */
+    public $Fkmarca;
 
-	/** @var int */
-	public $FktipoAuto;
+    /** @var int */
+    public $FktipoAuto;
 
-	/** @var int */
-	public $Ano;
+    /** @var int */
+    public $Ano;
 
-	/** @var int */
-	public $Motor;
+    /** @var string */
+    public $Motor;
 
-	/** @var int */
-	public $Color;
+    /** @var string */
+    public $Color;
 
-	/** @var int */
-	public $NroPuertas;
+    /** @var int */
+    public $NroPuertas;
 
-	/** @var int */
-	public $Capacidad;
+    /** @var int */
+    public $Capacidad;
 
-	/** @var int */
-	public $PrecioPorDia;
+    /** @var int */
+    public $PrecioPorDia;
 
-	/** @var int */
-	public $TipoCombustible;
+    /** @var string */
+    public $TipoCombustible;
 
-	/** @var int */
-	public $CapacidadCombustible;
+    /** @var int */
+    public $CapacidadCombustible;
 
-	/** @var int */
-	public $TipoCaja;
+    /** @var string */
+    public $TipoCaja;
 
-	/** @var int */
-	public $Estado;
+    /** @var string */
+    public $Condicion;
 
-	/** @var blob */
-	public $Foto;
+    /** @var blob */
+    public $Foto;
 
-	/** @var int */
-	public $Fkempresa;
+    /** @var int */
+    public $Estado;
+
+    /** @var int */
+    public $Fkempresa;
 
 
 

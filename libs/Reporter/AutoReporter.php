@@ -66,8 +66,9 @@ class AutoReporter extends Reporter
 			,`auto`.`tipo_combustible` as TipoCombustible
 			,`auto`.`capacidad_combustible` as CapacidadCombustible
 			,`auto`.`tipo_caja` as TipoCaja
-			,`auto`.`estado` as Estado
+			,`auto`.`condicion` as Condicion
 			,`auto`.`foto` as Foto
+			,`auto`.`estado` as Estado
 			,`auto`.`fkempresa` as Fkempresa
 		FROM `auto`
 		INNER JOIN `marca` on `fkmarca` = `pkmarca`

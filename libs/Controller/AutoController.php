@@ -163,8 +163,9 @@ class AutoController extends AppBaseController
 			$auto->TipoCombustible = $this->SafeGetVal($json, 'tipoCombustible');
 			$auto->CapacidadCombustible = $this->SafeGetVal($json, 'capacidadCombustible');
 			$auto->TipoCaja = $this->SafeGetVal($json, 'tipoCaja');
-			$auto->Estado = $this->SafeGetVal($json, 'estado');
+            $auto->Condicion = $this->SafeGetVal($json, 'condicion');
 			$auto->Foto = $this->SafeGetVal($json, 'foto');
+            $auto->Estado = $this->GetRouter()->GetUrlParam('estado');
 			$auto->Fkempresa = $this->SafeGetVal($json, 'fkempresa');
 
 			$auto->Validate();
@@ -223,9 +224,10 @@ class AutoController extends AppBaseController
 			$auto->TipoCombustible = $this->SafeGetVal($json, 'tipoCombustible', $auto->TipoCombustible);
 			$auto->CapacidadCombustible = $this->SafeGetVal($json, 'capacidadCombustible', $auto->CapacidadCombustible);
 			$auto->TipoCaja = $this->SafeGetVal($json, 'tipoCaja', $auto->TipoCaja);
-			$auto->Estado = $this->SafeGetVal($json, 'estado', $auto->Estado);
+            $auto->Condicion = $this->SafeGetVal($json, 'condicion', $auto->Condicion);
 			$auto->Foto = $this->SafeGetVal($json, 'foto', $auto->Foto);
-			$auto->Fkempresa = $this->SafeGetVal($json, 'fkempresa', $auto->Fkempresa);
+            $auto->Estado = $this->SafeGetVal($json, 'estado', $auto->Estado);
+            $auto->Fkempresa = $this->SafeGetVal($json, 'fkempresa', $auto->Fkempresa);
 
 			$auto->Validate();
 			$errors = $auto->GetValidationErrors();

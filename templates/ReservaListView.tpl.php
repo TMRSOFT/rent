@@ -21,7 +21,7 @@ $this->display('_Header.tpl.php');
 <div class="container">
 
     <h1>
-        <i class="icon-th-list"></i> Reservas
+        <i class="fa fa-calendar" aria-hidden="true"></i> Reservas
         <span id=loader class="loader progress progress-striped active"><span class="bar"></span></span>
 	<span class='input-append pull-right searchContainer'>
 		<input id='filter' type="text" placeholder="Search..." />
