@@ -165,7 +165,7 @@ class AutoController extends AppBaseController
 			$auto->TipoCaja = $this->SafeGetVal($json, 'tipoCaja');
             $auto->Condicion = $this->SafeGetVal($json, 'condicion');
 			$auto->Foto = $this->SafeGetVal($json, 'foto');
-            $auto->Estado = $this->GetRouter()->GetUrlParam('estado');
+            $auto->Estado = (int)$this->GetRouter()->GetUrlParam('estado');
 			$auto->Fkempresa = $this->SafeGetVal($json, 'fkempresa');
 
 			$auto->Validate();

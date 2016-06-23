@@ -66,7 +66,7 @@ class AutoMap implements IDaoMap, IDaoMap2
             self::$FM["TipoCaja"] = new FieldMap("TipoCaja","auto","tipo_caja",false,FM_TYPE_VARCHAR,20,null,false);
             self::$FM["Condicion"] = new FieldMap("Condicion","auto","condicion",false,FM_TYPE_VARCHAR,20,null,false);
             self::$FM["Foto"] = new FieldMap("Foto","auto","foto",false,FM_TYPE_BLOB,null,null,false);
-            self::$FM["Estado"] = new FieldMap("Estado","auto","estado",false,FM_TYPE_INT,11,null,false);
+            self::$FM["Estado"] = new FieldMap("Estado","auto","estado",false,FM_TYPE_INT,1,null,false);
             self::$FM["Fkempresa"] = new FieldMap("Fkempresa","auto","fkempresa",false,FM_TYPE_INT,11,null,false);
         }
         return self::$FM;
