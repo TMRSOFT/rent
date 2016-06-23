@@ -20,7 +20,8 @@ class ReservaReporter extends Reporter
 
     // the properties in this class must match the columns returned by GetCustomQuery().
     // 'CustomFieldExample' is an example that is not part of the `reserva` table
-    public $CustomFieldExample;
+    public $clienteNombre;
+    public $autoNombre;
 
     public $Pkreserva;
     public $FechaIni;
@@ -41,7 +42,8 @@ class ReservaReporter extends Reporter
     static function GetCustomQuery($criteria)
     {
         $sql = "select
-			'custom value here...' as CustomFieldExample
+			Concat(`cliente`.`ci`,' ',`cliente`.`nombre`, ' ' ,`cliente`.`apellido`) as clienteNombre
+			,Concat(`auto`.`placa`,' ',`auto`.`modelo`) as autoNombre
 			,`reserva`.`pkreserva` as Pkreserva
 			,`reserva`.`fecha_ini` as FechaIni
 			,`reserva`.`fecha_fin` as FechaFin
@@ -50,7 +52,10 @@ class ReservaReporter extends Reporter
 			,`reserva`.`fkauto` as Fkauto
 			,`reserva`.`fkempresa` as Fkempresa
 		FROM `reserva`
+		INNER JOIN `auto` on `placa` = `fkauto`
+		INNER JOIN `cliente` on `pkcliente` = `fkcliente`
 		WHERE `reserva`.`fkempresa` =".$_SESSION['empresa']->pkempresa;
+
 
         // the criteria can be used or you can write your own custom logic.
         // be sure to escape any user input with $criteria->Escape()

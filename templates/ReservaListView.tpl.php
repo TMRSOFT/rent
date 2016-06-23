@@ -21,7 +21,7 @@ $this->display('_Header.tpl.php');
 <div class="container">
 
     <h1>
-        <i class="icon-th-list"></i> Reservas
+        <i class="fa fa-calendar" aria-hidden="true"></i> Reservas
         <span id=loader class="loader progress progress-striped active"><span class="bar"></span></span>
 	<span class='input-append pull-right searchContainer'>
 		<input id='filter' type="text" placeholder="Search..." />
@@ -52,8 +52,8 @@ $this->display('_Header.tpl.php');
                     <td><%if (item.get('fechaIni')) { %><%= _date(app.parseDate(item.get('fechaIni'))).format('MMM D, YYYY') %><% } else { %>NULL<% } %></td>
                     <td><%if (item.get('fechaFin')) { %><%= _date(app.parseDate(item.get('fechaFin'))).format('MMM D, YYYY') %><% } else { %>NULL<% } %></td>
                     <td><%= _.escape(item.get('precio') || '') %></td>
-                    <td><%= _.escape(item.get('fkcliente') || '') %></td>
-				    <td><%= _.escape(item.get('fkauto') || '') %></td>
+                    <td><%= _.escape(item.get('clienteNombre') || '') %></td>
+				    <td><%= _.escape(item.get('autoNombre') || '') %></td>
                     <!-- UNCOMMENT TO SHOW ADDITIONAL COLUMNS
 				    <td><%= _.escape(item.get('fkempresa') || '') %></td>
                     -->
@@ -140,7 +140,7 @@ $this->display('_Header.tpl.php');
         <div class="modal-header">
             <a class="close" data-dismiss="modal">&times;</a>
             <h3>
-                <i class="icon-edit"></i> Reserva
+                <i class="fa fa-calendar" aria-hidden="true"></i> Reserva
                 <span id="modelLoader" class="loader progress progress-striped active"><span class="bar"></span></span>
             </h3>
         </div>

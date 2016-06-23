@@ -8,12 +8,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="RENT" />
 		<meta name="author" content="phreeze builder | phreeze.com" />
-
 		<!-- Le styles -->
 		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 		<link href="styles/style.css" rel="stylesheet" />
 		<link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
 		<link href="bootstrap/css/font-awesome.min.css" rel="stylesheet" />
+        <!-- Multiselect -->
+        <link href="bootstrap/css/bootstrap-multiselect.min.css" rel="stylesheet" >
+        <!-- Switch Button -->
+        <link href="bootstrap/css/bootstrap-switch.min.css" rel="stylesheet"/>
+
+
 		<!--[if IE 7]>
 		<link rel="stylesheet" href="bootstrap/css/font-awesome-ie7.min.css">
 		<![endif]-->
@@ -39,7 +44,9 @@
 				.script("bootstrap/js/bootstrap.min.js")
 				.script("bootstrap/js/bootstrap-datepicker.js")
 				.script("bootstrap/js/bootstrap-timepicker.js")
-				.script("bootstrap/js/bootstrap-combobox.js")
+				//.script("bootstrap/js/bootstrap-combobox.js")
+				.script("bootstrap/js/bootstrap-multiselect.js")
+				.script("bootstrap/js/bootstrap-switch.min.js")
 				.script("scripts/libs/underscore-min.js").wait()
 				.script("scripts/libs/underscore.date.min.js")
 				.script("scripts/libs/backbone-min.js")
@@ -80,12 +87,11 @@
 							</ul>
 							<ul class="nav pull-right">
 								<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-lock"></i> Login <i class="caret"></i></a>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"> <?php echo $_SESSION['empresa']->administrador_nombre ?> <i class="caret"></i></a>
 								<ul class="dropdown-menu">
-									<li><a href="./loginform">Login</a></li>
+									<li><a href="#">Mi cuenta <i class="fa fa-user fa-fw"></i></a></li>
 									<li class="divider"></li>
-									<li><a href="./secureuser">Example User Page <i class="icon-lock"></i></a></li>
-									<li><a href="./secureadmin">Example Admin Page <i class="icon-lock"></i></a></li>
+									<li><a href="logout.php">Cerrar Sesion <i class="fa fa-power-off fa-fw"></i></a></li>
 								</ul>
 								</li>
 							</ul>

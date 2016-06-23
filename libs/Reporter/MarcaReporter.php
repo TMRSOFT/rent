@@ -43,7 +43,7 @@ class MarcaReporter extends Reporter
 			,`marca`.`nombre` as Nombre
 			,`marca`.`pais` as Pais
 			,`marca`.`fkempresa` as Fkempresa
-		from `marca`
+		FROM `marca`
 		WHERE `marca`.`fkempresa` =".$_SESSION['empresa']->pkempresa;
 
 

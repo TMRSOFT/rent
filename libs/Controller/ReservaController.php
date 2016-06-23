@@ -4,6 +4,7 @@
 /** import supporting libraries */
 require_once("AppBaseController.php");
 require_once("Model/Reserva.php");
+require_once("Model/Auto.php");
 
 /**
  * ReservaController is the controller class for the Reserva object.  The
@@ -156,9 +157,15 @@ class ReservaController extends AppBaseController
             $reserva->FechaIni = date('Y-m-d H:i:s',strtotime($this->SafeGetVal($json, 'fechaIni')));
             $reserva->FechaFin = date('Y-m-d H:i:s',strtotime($this->SafeGetVal($json, 'fechaFin')));
             $reserva->Precio = $this->SafeGetVal($json, 'precio');
-            $reserva->Fkcliente = (int)$this->SafeGetVal($json, 'fkcliente');
-            $reserva->Fkauto = (int)$this->SafeGetVal($json, 'fkauto');
+            $reserva->Fkcliente = $this->SafeGetVal($json, 'fkcliente');
+            $reserva->Fkauto = $this->SafeGetVal($json, 'fkauto');
             $reserva->Fkempresa = $this->SafeGetVal($json, 'fkempresa');
+
+
+
+            $auto = $this->Phreezer->Get('Auto', $this->SafeGetVal($json, 'fkauto'));
+            $auto->Estado = 0;
+
 
             $reserva->Validate();
             $errors = $reserva->GetValidationErrors();
@@ -170,6 +177,7 @@ class ReservaController extends AppBaseController
             else
             {
                 $reserva->Save();
+                $auto->Save();
                 $this->RenderJSON($reserva, $this->JSONPCallback(), true, $this->SimpleObjectParams());
             }
 
@@ -227,8 +235,6 @@ class ReservaController extends AppBaseController
         }
         catch (Exception $ex)
         {
-
-
             $this->RenderExceptionJSON($ex);
         }
     }

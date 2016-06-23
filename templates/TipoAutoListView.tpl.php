@@ -21,7 +21,7 @@
 <div class="container">
 
 <h1>
-	<i class="icon-th-list"></i> TipoAutos
+    <i class="fa fa-truck" aria-hidden="true"></i> Tipos de Autos
 	<span id=loader class="loader progress progress-striped active"><span class="bar"></span></span>
 	<span class='input-append pull-right searchContainer'>
 		<input id='filter' type="text" placeholder="Search..." />
@@ -34,17 +34,17 @@
 		<table class="collection table table-bordered table-hover">
 		<thead>
 			<tr>
-				<th id="header_PktipoAuto">Pktipo Auto<% if (page.orderBy == 'PktipoAuto') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
+
 				<th id="header_Nombre">Nombre<% if (page.orderBy == 'Nombre') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
-				<th id="header_Fkempresa">Fkempresa<% if (page.orderBy == 'Fkempresa') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
+
 			</tr>
 		</thead>
 		<tbody>
 		<% items.each(function(item) { %>
 			<tr id="<%= _.escape(item.get('pktipoAuto')) %>">
-				<td><%= _.escape(item.get('pktipoAuto') || '') %></td>
+
 				<td><%= _.escape(item.get('nombre') || '') %></td>
-				<td><%= _.escape(item.get('fkempresa') || '') %></td>
+
 			</tr>
 		<% }); %>
 		</tbody>
@@ -95,7 +95,7 @@
 		<div class="modal-header">
 			<a class="close" data-dismiss="modal">&times;</a>
 			<h3>
-				<i class="icon-edit"></i> Edit TipoAuto
+                <i class="fa fa-truck" aria-hidden="true"></i> Tipo de Auto
 				<span id="modelLoader" class="loader progress progress-striped active"><span class="bar"></span></span>
 			</h3>
 		</div>

@@ -19,7 +19,7 @@
 	<?php if ($this->page == 'login') { ?>
 	
 		<div class="hero-unit">
-			<h1>Login Example</h1>
+			<h1>TMRSOFT rent-a-car systems</h1>
 			<p>This is an example of Phreeze authentication.  The default credentials are <strong>demo/pass</strong> and <strong>admin/pass</strong>.</p>
 			<p>
 				<a href="secureuser" class="btn btn-primary btn-large">Visit User Page</a>

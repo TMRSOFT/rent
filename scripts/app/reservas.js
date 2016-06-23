@@ -229,7 +229,6 @@ var page = {
         clienteValues.fetch({
             success: function(c){
                 var dd = $('#fkcliente');
-                dd.append('<option value=""></option>');
                 c.forEach(function(item,index)
                 {
                     dd.append(app.getOptionHtml(
@@ -237,6 +236,14 @@ var page = {
                         item.get('ci') + ' ' + item.get('nombre') + ' ' + item.get('apellido') ,
                         page.reserva.get('fkcliente') == item.get('pkcliente')
                     ));
+                });
+                $(dd).multiselect({
+                    enableFiltering: true,
+                    enableCaseInsensitiveFiltering: true,
+                    nonSelectedText : 'Seleccione el cliente',
+                    filterPlaceholder: 'Buscar cliente',
+                    buttonWidth: '200px',
+                    maxHeight: 200
                 });
             },
             error: function(collection,response,scope){
@@ -250,14 +257,23 @@ var page = {
         autoValues.fetch({
             success: function(c){
                 var dd = $('#fkauto');
-                dd.append('<option value=""></option>');
                 c.forEach(function(item,index)
                 {
-                    dd.append(app.getOptionHtml(
-                        item.get('placa'),
-                        item.get('placa') + ' ' + item.get('modelo') + ' ($' + item.get('precioPorDia') + ' c/d)',
-                        page.reserva.get('fkauto') == item.get('placa')
-                    ));
+                    if (item.get('estado') == 1) {
+                        dd.append(app.getOptionHtml(
+                            item.get('placa'),
+                            item.get('placa') + ' ' + item.get('modelo') + ' ($' + item.get('precioPorDia') + ' c/d)',
+                            page.reserva.get('fkauto') == item.get('placa')
+                        ));
+                    }
+                });
+                $(dd).multiselect({
+                    enableFiltering: true,
+                    enableCaseInsensitiveFiltering: true,
+                    nonSelectedText : 'Seleccione el auto',
+                    filterPlaceholder: 'Buscar auto',
+                    buttonWidth: '200px',
+                    maxHeight: 200
                 });
             },
             error: function(collection,response,scope){

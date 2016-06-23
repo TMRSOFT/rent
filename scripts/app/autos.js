@@ -7,221 +7,221 @@
  */
 var page = {
 
-	autos: new model.AutoCollection(),
-	collectionView: null,
-	auto: null,
-	modelView: null,
-	isInitialized: false,
-	isInitializing: false,
+    autos: new model.AutoCollection(),
+    collectionView: null,
+    auto: null,
+    modelView: null,
+    isInitialized: false,
+    isInitializing: false,
 
-	fetchParams: { filter: '', orderBy: '', orderDesc: '', page: 1 },
-	fetchInProgress: false,
-	dialogIsOpen: false,
+    fetchParams: { filter: '', orderBy: '', orderDesc: '', page: 1 },
+    fetchInProgress: false,
+    dialogIsOpen: false,
 
-	/**
-	 *
-	 */
-	init: function() {
-		// ensure initialization only occurs once
-		if (page.isInitialized || page.isInitializing) return;
-		page.isInitializing = true;
+    /**
+     *
+     */
+    init: function() {
+        // ensure initialization only occurs once
+        if (page.isInitialized || page.isInitializing) return;
+        page.isInitializing = true;
 
-		if (!$.isReady && console) console.warn('page was initialized before dom is ready.  views may not render properly.');
+        if (!$.isReady && console) console.warn('page was initialized before dom is ready.  views may not render properly.');
 
-		// make the new button clickable
-		$("#newAutoButton").click(function(e) {
-			e.preventDefault();
-			page.showDetailDialog();
-		});
+        // make the new button clickable
+        $("#newAutoButton").click(function(e) {
+            e.preventDefault();
+            page.showDetailDialog();
+        });
 
-		// let the page know when the dialog is open
-		$('#autoDetailDialog').on('show',function() {
-			page.dialogIsOpen = true;
-		});
+        // let the page know when the dialog is open
+        $('#autoDetailDialog').on('show',function() {
+            page.dialogIsOpen = true;
+        });
 
-		// when the model dialog is closed, let page know and reset the model view
-		$('#autoDetailDialog').on('hidden',function() {
-			$('#modelAlert').html('');
-			page.dialogIsOpen = false;
-		});
+        // when the model dialog is closed, let page know and reset the model view
+        $('#autoDetailDialog').on('hidden',function() {
+            $('#modelAlert').html('');
+            page.dialogIsOpen = false;
+        });
 
-		// save the model when the save button is clicked
-		$("#saveAutoButton").click(function(e) {
-			e.preventDefault();
-			page.updateModel();
-		});
+        // save the model when the save button is clicked
+        $("#saveAutoButton").click(function(e) {
+            e.preventDefault();
+            page.updateModel();
+        });
 
-		// initialize the collection view
-		this.collectionView = new view.CollectionView({
-			el: $("#autoCollectionContainer"),
-			templateEl: $("#autoCollectionTemplate"),
-			collection: page.autos
-		});
+        // initialize the collection view
+        this.collectionView = new view.CollectionView({
+            el: $("#autoCollectionContainer"),
+            templateEl: $("#autoCollectionTemplate"),
+            collection: page.autos
+        });
 
-		// initialize the search filter
-		$('#filter').change(function(obj) {
-			page.fetchParams.filter = $('#filter').val();
-			page.fetchParams.page = 1;
-			page.fetchAutos(page.fetchParams);
-		});
-		
-		// make the rows clickable ('rendered' is a custom event, not a standard backbone event)
-		this.collectionView.on('rendered',function(){
+        // initialize the search filter
+        $('#filter').change(function(obj) {
+            page.fetchParams.filter = $('#filter').val();
+            page.fetchParams.page = 1;
+            page.fetchAutos(page.fetchParams);
+        });
 
-			// attach click handler to the table rows for editing
-			$('table.collection tbody tr').click(function(e) {
-				e.preventDefault();
-				var m = page.autos.get(this.id);
-				page.showDetailDialog(m);
-			});
+        // make the rows clickable ('rendered' is a custom event, not a standard backbone event)
+        this.collectionView.on('rendered',function(){
 
-			// make the headers clickable for sorting
- 			$('table.collection thead tr th').click(function(e) {
- 				e.preventDefault();
-				var prop = this.id.replace('header_','');
+            // attach click handler to the table rows for editing
+            $('table.collection tbody tr').click(function(e) {
+                e.preventDefault();
+                var m = page.autos.get(this.id);
+                page.showDetailDialog(m);
+            });
 
-				// toggle the ascending/descending before we change the sort prop
-				page.fetchParams.orderDesc = (prop == page.fetchParams.orderBy && !page.fetchParams.orderDesc) ? '1' : '';
-				page.fetchParams.orderBy = prop;
-				page.fetchParams.page = 1;
- 				page.fetchAutos(page.fetchParams);
- 			});
+            // make the headers clickable for sorting
+            $('table.collection thead tr th').click(function(e) {
+                e.preventDefault();
+                var prop = this.id.replace('header_','');
 
-			// attach click handlers to the pagination controls
-			$('.pageButton').click(function(e) {
-				e.preventDefault();
-				page.fetchParams.page = this.id.substr(5);
-				page.fetchAutos(page.fetchParams);
-			});
-			
-			page.isInitialized = true;
-			page.isInitializing = false;
-		});
+                // toggle the ascending/descending before we change the sort prop
+                page.fetchParams.orderDesc = (prop == page.fetchParams.orderBy && !page.fetchParams.orderDesc) ? '1' : '';
+                page.fetchParams.orderBy = prop;
+                page.fetchParams.page = 1;
+                page.fetchAutos(page.fetchParams);
+            });
 
-		// backbone docs recommend bootstrapping data on initial page load, but we live by our own rules!
-		this.fetchAutos({ page: 1 });
+            // attach click handlers to the pagination controls
+            $('.pageButton').click(function(e) {
+                e.preventDefault();
+                page.fetchParams.page = this.id.substr(5);
+                page.fetchAutos(page.fetchParams);
+            });
 
-		// initialize the model view
-		this.modelView = new view.ModelView({
-			el: $("#autoModelContainer")
-		});
+            page.isInitialized = true;
+            page.isInitializing = false;
+        });
 
-		// tell the model view where it's template is located
-		this.modelView.templateEl = $("#autoModelTemplate");
+        // backbone docs recommend bootstrapping data on initial page load, but we live by our own rules!
+        this.fetchAutos({ page: 1 });
 
-		if (model.longPollDuration > 0)	{
-			setInterval(function () {
+        // initialize the model view
+        this.modelView = new view.ModelView({
+            el: $("#autoModelContainer")
+        });
 
-				if (!page.dialogIsOpen)	{
-					page.fetchAutos(page.fetchParams,true);
-				}
+        // tell the model view where it's template is located
+        this.modelView.templateEl = $("#autoModelTemplate");
 
-			}, model.longPollDuration);
-		}
-	},
+        if (model.longPollDuration > 0)	{
+            setInterval(function () {
 
-	/**
-	 * Fetch the collection data from the server
-	 * @param object params passed through to collection.fetch
-	 * @param bool true to hide the loading animation
-	 */
-	fetchAutos: function(params, hideLoader) {
-		// persist the params so that paging/sorting/filtering will play together nicely
-		page.fetchParams = params;
+                if (!page.dialogIsOpen)	{
+                    page.fetchAutos(page.fetchParams,true);
+                }
 
-		if (page.fetchInProgress) {
-			if (console) console.log('supressing fetch because it is already in progress');
-		}
+            }, model.longPollDuration);
+        }
+    },
 
-		page.fetchInProgress = true;
+    /**
+     * Fetch the collection data from the server
+     * @param object params passed through to collection.fetch
+     * @param bool true to hide the loading animation
+     */
+    fetchAutos: function(params, hideLoader) {
+        // persist the params so that paging/sorting/filtering will play together nicely
+        page.fetchParams = params;
 
-		if (!hideLoader) app.showProgress('loader');
+        if (page.fetchInProgress) {
+            if (console) console.log('supressing fetch because it is already in progress');
+        }
 
-		page.autos.fetch({
+        page.fetchInProgress = true;
 
-			data: params,
+        if (!hideLoader) app.showProgress('loader');
 
-			success: function() {
+        page.autos.fetch({
 
-				if (page.autos.collectionHasChanged) {
-					// TODO: add any logic necessary if the collection has changed
-					// the sync event will trigger the view to re-render
-				}
+            data: params,
 
-				app.hideProgress('loader');
-				page.fetchInProgress = false;
-			},
+            success: function() {
 
-			error: function(m, r) {
-				app.appendAlert(app.getErrorMessage(r), 'alert-error',0,'collectionAlert');
-				app.hideProgress('loader');
-				page.fetchInProgress = false;
-			}
+                if (page.autos.collectionHasChanged) {
+                    // TODO: add any logic necessary if the collection has changed
+                    // the sync event will trigger the view to re-render
+                }
 
-		});
-	},
+                app.hideProgress('loader');
+                page.fetchInProgress = false;
+            },
 
-	/**
-	 * show the dialog for editing a model
-	 * @param model
-	 */
-	showDetailDialog: function(m) {
+            error: function(m, r) {
+                app.appendAlert(app.getErrorMessage(r), 'alert-error',0,'collectionAlert');
+                app.hideProgress('loader');
+                page.fetchInProgress = false;
+            }
 
-		// show the modal dialog
-		$('#autoDetailDialog').modal({ show: true });
+        });
+    },
 
-		// if a model was specified then that means a user is editing an existing record
-		// if not, then the user is creating a new record
-		page.auto = m ? m : new model.AutoModel();
+    /**
+     * show the dialog for editing a model
+     * @param model
+     */
+    showDetailDialog: function(m) {
 
-		page.modelView.model = page.auto;
+        // show the modal dialog
+        $('#autoDetailDialog').modal({ show: true });
 
-		if (page.auto.id == null || page.auto.id == '') {
-			// this is a new record, there is no need to contact the server
-			page.renderModelView(false);
-		} else {
-			app.showProgress('modelLoader');
+        // if a model was specified then that means a user is editing an existing record
+        // if not, then the user is creating a new record
+        page.auto = m ? m : new model.AutoModel();
 
-			// fetch the model from the server so we are not updating stale data
-			page.auto.fetch({
+        page.modelView.model = page.auto;
 
-				success: function() {
-					// data returned from the server.  render the model view
-					page.renderModelView(true);
-				},
+        if (page.auto.id == null || page.auto.id == '') {
+            // this is a new record, there is no need to contact the server
+            page.renderModelView(false);
+        } else {
+            app.showProgress('modelLoader');
 
-				error: function(m, r) {
-					app.appendAlert(app.getErrorMessage(r), 'alert-error',0,'modelAlert');
-					app.hideProgress('modelLoader');
-				}
+            // fetch the model from the server so we are not updating stale data
+            page.auto.fetch({
 
-			});
-		}
+                success: function() {
+                    // data returned from the server.  render the model view
+                    page.renderModelView(true);
+                },
 
-	},
+                error: function(m, r) {
+                    app.appendAlert(app.getErrorMessage(r), 'alert-error',0,'modelAlert');
+                    app.hideProgress('modelLoader');
+                }
 
-	/**
-	 * Render the model template in the popup
-	 * @param bool show the delete button
-	 */
-	renderModelView: function(showDeleteButton)	{
-		page.modelView.render();
+            });
+        }
 
-		app.hideProgress('modelLoader');
+    },
 
-		// initialize any special controls
-		try {
-			$('.date-picker')
-				.datepicker()
-				.on('changeDate', function(ev){
-					$('.date-picker').datepicker('hide');
-				});
-		} catch (error) {
-			// this happens if the datepicker input.value isn't a valid date
-			if (console) console.log('datepicker error: '+error.message);
-		}
-		
-		$('.timepicker-default').timepicker({ defaultTime: 'value' });
+    /**
+     * Render the model template in the popup
+     * @param bool show the delete button
+     */
+    renderModelView: function(showDeleteButton)	{
+        page.modelView.render();
+
+        app.hideProgress('modelLoader');
+
+        // initialize any special controls
+        try {
+            $('.date-picker')
+                .datepicker()
+                .on('changeDate', function(ev){
+                    $('.date-picker').datepicker('hide');
+                });
+        } catch (error) {
+            // this happens if the datepicker input.value isn't a valid date
+            if (console) console.log('datepicker error: '+error.message);
+        }
+
+        $('.timepicker-default').timepicker({ defaultTime: 'value' });
 
         // poblar el combobox con las opciones para marca de auto
         // TODO: load only the selected value, then fetch all options when the drop-down is clicked
@@ -229,7 +229,7 @@ var page = {
         marcaValues.fetch({
             success: function(c){
                 var dd = $('#fkmarca');
-                dd.append('<option value=""></option>');
+
                 c.forEach(function(item,index)
                 {
                     dd.append(app.getOptionHtml(
@@ -237,6 +237,14 @@ var page = {
                         item.get('nombre'),
                         page.auto.get('fkmarca') == item.get('pkmarca')
                     ));
+                });
+                $(dd).multiselect({
+                    enableFiltering: true,
+                    enableCaseInsensitiveFiltering: true,
+                    nonSelectedText : 'Seleccione la marca del auto',
+                    filterPlaceholder: 'Buscar marca',
+                    buttonWidth: '200px',
+                    maxHeight: 200
                 });
             },
             error: function(collection,response,scope){
@@ -250,7 +258,6 @@ var page = {
         tipo_autoValues.fetch({
             success: function(c){
                 var dd = $('#fktipoAuto');
-                dd.append('<option value=""></option>');
                 c.forEach(function(item,index)
                 {
                     dd.append(app.getOptionHtml(
@@ -259,132 +266,140 @@ var page = {
                         page.auto.get('fktipoAuto') == item.get('pktipoAuto')
                     ));
                 });
+                $(dd).multiselect({
+                    enableFiltering: true,
+                    enableCaseInsensitiveFiltering: true,
+                    nonSelectedText : 'Seleccione un tipo de auto',
+                    filterPlaceholder: 'Buscar tipo de auto',
+                    buttonWidth: '200px',
+                    maxHeight: 200
+                });
             },
             error: function(collection,response,scope){
                 app.appendAlert(app.getErrorMessage(response), 'alert-error',0,'modelAlert');
             }
         });
 
+        if (showDeleteButton) {
+            // attach click handlers to the delete buttons
 
-		if (showDeleteButton) {
-			// attach click handlers to the delete buttons
+            $('#deleteAutoButton').click(function(e) {
+                e.preventDefault();
+                $('#confirmDeleteAutoContainer').show('fast');
+            });
 
-			$('#deleteAutoButton').click(function(e) {
-				e.preventDefault();
-				$('#confirmDeleteAutoContainer').show('fast');
-			});
+            $('#cancelDeleteAutoButton').click(function(e) {
+                e.preventDefault();
+                $('#confirmDeleteAutoContainer').hide('fast');
+            });
 
-			$('#cancelDeleteAutoButton').click(function(e) {
-				e.preventDefault();
-				$('#confirmDeleteAutoContainer').hide('fast');
-			});
+            $('#confirmDeleteAutoButton').click(function(e) {
+                e.preventDefault();
+                page.deleteModel();
+            });
 
-			$('#confirmDeleteAutoButton').click(function(e) {
-				e.preventDefault();
-				page.deleteModel();
-			});
+        } else {
+            // no point in initializing the click handlers if we don't show the button
+            $('#deleteAutoButtonContainer').hide();
+        }
+    },
 
-		} else {
-			// no point in initializing the click handlers if we don't show the button
-			$('#deleteAutoButtonContainer').hide();
-		}
-	},
+    /**
+     * update the model that is currently displayed in the dialog
+     */
+    updateModel: function() {
+        // reset any previous errors
+        $('#modelAlert').html('');
+        $('.control-group').removeClass('error');
+        $('.help-inline').html('');
 
-	/**
-	 * update the model that is currently displayed in the dialog
-	 */
-	updateModel: function() {
-		// reset any previous errors
-		$('#modelAlert').html('');
-		$('.control-group').removeClass('error');
-		$('.help-inline').html('');
+        // if this is new then on success we need to add it to the collection
+        var isNew = page.auto.isNew();
 
-		// if this is new then on success we need to add it to the collection
-		var isNew = page.auto.isNew();
+        app.showProgress('modelLoader');
 
-		app.showProgress('modelLoader');
+        page.auto.save({
+            'placa': $('input#placa').val(),
+            'modelo': $('input#modelo').val(),
+            'fkmarca': $('select#fkmarca').val(),
+            'fktipoAuto': $('select#fktipoAuto').val(),
+            'ano': $('input#ano').val(),
+            'motor': $('input#motor').val(),
+            'color': $('input#color').val(),
+            'nroPuertas': $('input#nroPuertas').val(),
+            'capacidad': $('input#capacidad').val(),
+            'precioPorDia': $('input#precioPorDia').val(),
+            'tipoCombustible': $('input#tipoCombustible').val(),
+            'capacidadCombustible': $('input#capacidadCombustible').val(),
+            'tipoCaja': $('input#tipoCaja').val(),
+            'condicion': $('input#condicion').val(),
+            'foto': $('input#foto').val(),
+            'estado': $('select#estado').val(),
+            'fkempresa': $('input#fkempresa').val()
+        }, {
+            wait: true,
+            success: function(){
+                $('#autoDetailDialog').modal('hide');
+                setTimeout("app.appendAlert('Auto was sucessfully " + (isNew ? "inserted" : "updated") + "','alert-success',3000,'collectionAlert')",500);
+                app.hideProgress('modelLoader');
 
-		page.auto.save({
-			'placa': $('input#placa').val(),
-			'modelo': $('input#modelo').val(),
-			'fkmarca': $('select#fkmarca').val(),
-			'fktipoAuto': $('select#fktipoAuto').val(),
-			'ano': $('input#ano').val(),
-			'motor': $('input#motor').val(),
-			'color': $('input#color').val(),
-			'nroPuertas': $('input#nroPuertas').val(),
-			'capacidad': $('input#capacidad').val(),
-			'precioPorDia': $('input#precioPorDia').val(),
-			'tipoCombustible': $('input#tipoCombustible').val(),
-			'capacidadCombustible': $('input#capacidadCombustible').val(),
-			'tipoCaja': $('input#tipoCaja').val(),
-			'estado': $('input#estado').val(),
-			'foto': $('input#foto').val(),
-			'fkempresa': $('input#fkempresa').val()
-		}, {
-			wait: true,
-			success: function(){
-				$('#autoDetailDialog').modal('hide');
-				setTimeout("app.appendAlert('Auto was sucessfully " + (isNew ? "inserted" : "updated") + "','alert-success',3000,'collectionAlert')",500);
-				app.hideProgress('modelLoader');
+                // if the collection was initally new then we need to add it to the collection now
+                if (isNew) { page.autos.add(page.auto) }
 
-				// if the collection was initally new then we need to add it to the collection now
-				if (isNew) { page.autos.add(page.auto) }
+                if (model.reloadCollectionOnModelUpdate) {
+                    // re-fetch and render the collection after the model has been updated
+                    page.fetchAutos(page.fetchParams,true);
+                }
+            },
+            error: function(model,response,scope){
 
-				if (model.reloadCollectionOnModelUpdate) {
-					// re-fetch and render the collection after the model has been updated
-					page.fetchAutos(page.fetchParams,true);
-				}
-		},
-			error: function(model,response,scope){
+                app.hideProgress('modelLoader');
 
-				app.hideProgress('modelLoader');
+                app.appendAlert(app.getErrorMessage(response), 'alert-error',0,'modelAlert');
 
-				app.appendAlert(app.getErrorMessage(response), 'alert-error',0,'modelAlert');
+                try {
+                    var json = $.parseJSON(response.responseText);
 
-				try {
-					var json = $.parseJSON(response.responseText);
+                    if (json.errors) {
+                        $.each(json.errors, function(key, value) {
+                            $('#'+key+'InputContainer').addClass('error');
+                            $('#'+key+'InputContainer span.help-inline').html(value);
+                            $('#'+key+'InputContainer span.help-inline').show();
+                        });
+                    }
+                } catch (e2) {
+                    if (console) console.log('error parsing server response: '+e2.message);
+                }
+            }
+        });
+    },
 
-					if (json.errors) {
-						$.each(json.errors, function(key, value) {
-							$('#'+key+'InputContainer').addClass('error');
-							$('#'+key+'InputContainer span.help-inline').html(value);
-							$('#'+key+'InputContainer span.help-inline').show();
-						});
-					}
-				} catch (e2) {
-					if (console) console.log('error parsing server response: '+e2.message);
-				}
-			}
-		});
-	},
+    /**
+     * delete the model that is currently displayed in the dialog
+     */
+    deleteModel: function()	{
+        // reset any previous errors
+        $('#modelAlert').html('');
 
-	/**
-	 * delete the model that is currently displayed in the dialog
-	 */
-	deleteModel: function()	{
-		// reset any previous errors
-		$('#modelAlert').html('');
+        app.showProgress('modelLoader');
 
-		app.showProgress('modelLoader');
+        page.auto.destroy({
+            wait: true,
+            success: function(){
+                $('#autoDetailDialog').modal('hide');
+                setTimeout("app.appendAlert('The Auto record was deleted','alert-success',3000,'collectionAlert')",500);
+                app.hideProgress('modelLoader');
 
-		page.auto.destroy({
-			wait: true,
-			success: function(){
-				$('#autoDetailDialog').modal('hide');
-				setTimeout("app.appendAlert('The Auto record was deleted','alert-success',3000,'collectionAlert')",500);
-				app.hideProgress('modelLoader');
-
-				if (model.reloadCollectionOnModelUpdate) {
-					// re-fetch and render the collection after the model has been updated
-					page.fetchAutos(page.fetchParams,true);
-				}
-			},
-			error: function(model,response,scope) {
-				app.appendAlert(app.getErrorMessage(response), 'alert-error',0,'modelAlert');
-				app.hideProgress('modelLoader');
-			}
-		});
-	}
+                if (model.reloadCollectionOnModelUpdate) {
+                    // re-fetch and render the collection after the model has been updated
+                    page.fetchAutos(page.fetchParams,true);
+                }
+            },
+            error: function(model,response,scope) {
+                app.appendAlert(app.getErrorMessage(response), 'alert-error',0,'modelAlert');
+                app.hideProgress('modelLoader');
+            }
+        });
+    }
 };
 

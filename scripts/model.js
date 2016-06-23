@@ -153,8 +153,9 @@ model.AutoModel = Backbone.Model.extend({
 	tipoCombustible: '',
 	capacidadCombustible: '',
 	tipoCaja: '',
-	estado: '',
-	foto: '',
+    condicion: '',
+    foto: '',
+    estado: '',
 	fkempresa: '',
 	defaults: {
 		'placa': null,
@@ -170,8 +171,9 @@ model.AutoModel = Backbone.Model.extend({
 		'tipoCombustible': '',
 		'capacidadCombustible': '',
 		'tipoCaja': '',
-		'estado': '',
-		'foto': '',
+        'condicion': '',
+        'foto': '',
+        'estado': '',
 		'fkempresa': ''
 	}
 });
@@ -291,7 +293,9 @@ model.ReservaModel = Backbone.Model.extend({
     fechaFin: '',
     precio: '',
     fkcliente: '',
+    clienteNombre: '',
     fkauto: '',
+    autoNombre :'',
     fkempresa: '',
     defaults: {
         'pkreserva': null,
